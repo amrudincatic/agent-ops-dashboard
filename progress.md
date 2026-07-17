@@ -35,3 +35,4 @@ A running journal of every step. Newest entries at the bottom.
 - Task 15 (polish): disabled per-tick chart re-animation for smooth live updates; added accessible status labels to the event feed; unified the Live indicator to the `ok` color token; refreshed the screenshot.
 - Surfaced attributed revenue: added totalRevenueUsd aggregation (with test) and an Attributed revenue KPI (replacing the always-5 Active agents card).
 - Dark mode: class-based theme with header toggle, system default, no-flash init; variable-driven tokens so charts and UI adapt. Added footer crediting Amrudin Catic (amrudincatic.com) and a demo-only note.
+- Verified both themes in a real browser (light and dark), captured `docs/screenshot.png` and `docs/screenshot-dark.png`, and rewrote `README.md` into a full project explainer (what it is, what it shows, how it works, stack, run, structure, testing, scope, author).
