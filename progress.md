@@ -26,3 +26,4 @@ A running journal of every step. Newest entries at the bottom.
 - Task 10: runs, cost, and status charts (RunsChart, CostChart, StatusDonut) built on Recharts.
 - Task 11: per-agent performance table (AgentTable) with inline trend sparklines.
 - Task 12: live event feed (EventFeed) with a fade-in keyframe for new entries.
+- Task 13: human approval queue (ApprovalQueue) wired to resolveApproval; feed and queue share a two-column row.
