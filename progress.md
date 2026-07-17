@@ -29,3 +29,5 @@ A running journal of every step. Newest entries at the bottom.
 - Task 13: human approval queue (ApprovalQueue) wired to resolveApproval; feed and queue share a two-column row.
 - Task 14: final assembly gate: npm test (24 passing), npm run build (no type errors), npm run lint (clean).
 - Task 15 (design): applied visual system (Space Grotesk / Inter / IBM Plex Mono, pipeline color sequence, flat card system, sticky header, self-hosted fonts).
+- Task 15 (verify): booted the app in a real browser, confirmed no console errors, checked mobile layout; added `min-w` so the agent table scrolls instead of cramping on small screens.
+- Task 15 (docs): captured `docs/screenshot.png` and wrote `README.md` (overview, what it demonstrates, run instructions).

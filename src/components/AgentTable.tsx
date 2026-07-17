@@ -8,7 +8,7 @@ export function AgentTable({ rollups }: { rollups: AgentRollup[] }) {
     <div className="card p-5">
       <h2 className="panel-title mb-4">Per-agent performance</h2>
       <div className="overflow-x-auto">
-        <table className="w-full text-sm">
+        <table className="w-full min-w-[560px] text-sm">
           <thead>
             <tr className="text-left text-xs uppercase tracking-wide text-faint">
               <th className="pb-2 font-medium">Agent</th>
