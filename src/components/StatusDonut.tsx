@@ -16,7 +16,7 @@ export function StatusDonut({ breakdown }: { breakdown: StatusBreakdown }) {
           <Pie data={data} dataKey="value" nameKey="name" innerRadius={54} outerRadius={78} paddingAngle={2} isAnimationActive={false}>
             {data.map((d) => <Cell key={d.name} fill={d.color} />)}
           </Pie>
-          <Tooltip contentStyle={{ borderRadius: 10, border: '1px solid #EAECF0', fontSize: 12, fontFamily: 'IBM Plex Mono, monospace' }} />
+          <Tooltip contentStyle={{ borderRadius: 10, border: '1px solid rgb(var(--hairline))', background: 'rgb(var(--surface))', color: 'rgb(var(--ink))', fontSize: 12, fontFamily: 'IBM Plex Mono, monospace' }} />
         </PieChart>
       </ResponsiveContainer>
       <ul className="mt-3 flex justify-center gap-4 text-xs text-muted">

@@ -1,6 +1,7 @@
 import type { Config } from 'tailwindcss';
 
 export default {
+  darkMode: 'class',
   content: ['./index.html', './src/**/*.{ts,tsx}'],
   theme: {
     extend: {
@@ -10,13 +11,17 @@ export default {
         mono: ['"IBM Plex Mono"', 'ui-monospace', 'SFMono-Regular', 'monospace'],
       },
       colors: {
-        ink: '#0E1726',
-        muted: '#667085',
-        faint: '#98A2B3',
-        canvas: '#F6F7F9',
-        surface: '#FFFFFF',
-        hairline: '#EAECF0',
-        brand: { DEFAULT: '#4338CA', soft: '#EEF0FF' },
+        ink: 'rgb(var(--ink) / <alpha-value>)',
+        muted: 'rgb(var(--muted) / <alpha-value>)',
+        faint: 'rgb(var(--faint) / <alpha-value>)',
+        canvas: 'rgb(var(--canvas) / <alpha-value>)',
+        surface: 'rgb(var(--surface) / <alpha-value>)',
+        hairline: 'rgb(var(--hairline) / <alpha-value>)',
+        brand: {
+          DEFAULT: 'rgb(var(--brand) / <alpha-value>)',
+          soft: 'rgb(var(--brand-soft) / <alpha-value>)',
+          strong: 'rgb(var(--brand-strong) / <alpha-value>)',
+        },
         ok: '#17B26A',
         warn: '#F79009',
         bad: '#F04438',

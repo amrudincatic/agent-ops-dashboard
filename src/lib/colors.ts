@@ -1,7 +1,7 @@
 import type { AgentId, RunStatus } from '../data/types';
 
 // Deep indigo brand, used for chrome/accents (focus, cost bars, sparklines).
-export const ACCENT = '#4338CA';
+export const ACCENT = 'rgb(var(--brand))';
 
 // Refined, cohesive status palette.
 export const STATUS_COLORS: Record<RunStatus, string> = {

@@ -7,6 +7,7 @@ import { StatusDonut } from './components/StatusDonut';
 import { AgentTable } from './components/AgentTable';
 import { EventFeed } from './components/EventFeed';
 import { ApprovalQueue } from './components/ApprovalQueue';
+import { Footer } from './components/Footer';
 import { computeKpis, computeAgentRollups, bucketRuns, computeStatusBreakdown, approvalQueue } from './data/aggregations';
 import { useDashboardStore } from './store/useDashboardStore';
 import { useLiveStream } from './store/useLiveStream';
@@ -43,6 +44,7 @@ export default function App() {
           <ApprovalQueue items={queue} now={now} onResolve={resolveApproval} />
         </div>
       </main>
+      <Footer />
     </div>
   );
 }

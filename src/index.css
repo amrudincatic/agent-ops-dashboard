@@ -2,7 +2,31 @@
 @tailwind components;
 @tailwind utilities;
 
-:root { color-scheme: light; }
+:root {
+  color-scheme: light;
+  --canvas: 246 247 249;
+  --surface: 255 255 255;
+  --ink: 14 23 38;
+  --muted: 102 112 133;
+  --faint: 152 162 179;
+  --hairline: 234 236 240;
+  --brand: 67 56 202;
+  --brand-soft: 238 240 255;
+  --brand-strong: 67 56 202;
+}
+
+.dark {
+  color-scheme: dark;
+  --canvas: 11 15 26;
+  --surface: 17 23 38;
+  --ink: 230 234 242;
+  --muted: 148 160 184;
+  --faint: 100 112 138;
+  --hairline: 33 42 59;
+  --brand: 99 102 241;
+  --brand-soft: 35 43 69;
+  --brand-strong: 199 210 254;
+}
 
 html { -webkit-text-size-adjust: 100%; }
 
@@ -12,19 +36,10 @@ body {
 }
 
 @layer components {
-  .card {
-    @apply rounded-xl border border-hairline bg-surface shadow-card;
-  }
-  .eyebrow {
-    @apply text-[11px] font-medium uppercase tracking-[0.08em] text-faint;
-  }
-  .panel-title {
-    @apply font-display text-[15px] font-semibold tracking-tight text-ink;
-  }
-  .num {
-    font-family: 'IBM Plex Mono', ui-monospace, monospace;
-    font-feature-settings: 'tnum';
-  }
+  .card { @apply rounded-xl border border-hairline bg-surface shadow-card; }
+  .eyebrow { @apply text-[11px] font-medium uppercase tracking-[0.08em] text-faint; }
+  .panel-title { @apply font-display text-[15px] font-semibold tracking-tight text-ink; }
+  .num { font-family: 'IBM Plex Mono', ui-monospace, monospace; font-feature-settings: 'tnum'; }
 }
 
 @keyframes feed-in {
@@ -38,7 +53,7 @@ body {
 }
 
 :focus-visible {
-  outline: 2px solid #4338CA;
+  outline: 2px solid rgb(var(--brand));
   outline-offset: 2px;
   border-radius: 4px;
 }
