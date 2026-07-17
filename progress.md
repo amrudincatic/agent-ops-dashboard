@@ -16,3 +16,4 @@ A running journal of every step. Newest entries at the bottom.
 - Task 1: scaffolded Vite + React + TS + Tailwind + Zustand + Recharts + Vitest; dev/test/build toolchain verified.
 - Task 2: domain types (`AgentRun`, `Agent`, `Kpis`, `TimeBucket`, `AgentRollup`, `StatusBreakdown`) and the 5-agent registry, with tests (3 passing).
 - Task 3: seeded `mulberry32` PRNG + deterministic history generator (`generateHistory`, `makeRun`), with tests (3 passing).
+- Task 4: pure aggregation selectors (`computeKpis`, `bucketRuns`, `computeAgentRollups`, `computeStatusBreakdown`, `approvalQueue`), with tests (5 passing).
