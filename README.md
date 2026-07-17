@@ -2,6 +2,8 @@
 
 A clean, modern, single-page **analytics dashboard** that monitors a simulated live **AI agent pipeline**. Runs stream in real time while KPIs, charts, a per-agent table, a live event feed, and a human-approval queue all update as the pipeline works.
 
+**Live demo: https://amrudincatic.github.io/agent-ops-dashboard/**
+
 > **This is an example project, built for demonstration purposes only.** It is a compact proof-of-work piece that shows the kind of dashboard and analytics setup I build for clients. There is no backend and no real data: everything you see is generated locally and simulated, so the dashboard is self-contained and always shows a live, populated view.
 
 ![Agent Ops dashboard, light theme](docs/screenshot.png)
