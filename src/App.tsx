@@ -5,6 +5,7 @@ import { RunsChart } from './components/RunsChart';
 import { CostChart } from './components/CostChart';
 import { StatusDonut } from './components/StatusDonut';
 import { AgentTable } from './components/AgentTable';
+import { EventFeed } from './components/EventFeed';
 import { computeKpis, computeAgentRollups, bucketRuns, computeStatusBreakdown } from './data/aggregations';
 import { useDashboardStore } from './store/useDashboardStore';
 import { useLiveStream } from './store/useLiveStream';
@@ -18,6 +19,7 @@ export default function App() {
   const rollups = useMemo(() => computeAgentRollups(runs, now), [runs, now]);
   const buckets = useMemo(() => bucketRuns(runs, now), [runs, now]);
   const breakdown = useMemo(() => computeStatusBreakdown(runs, now), [runs, now]);
+  const feed = useMemo(() => [...runs].slice(-40).reverse(), [runs]);
   return (
     <div className="mx-auto max-w-7xl px-6 py-8">
       <Header lastUpdated={lastUpdated} />
@@ -29,6 +31,7 @@ export default function App() {
           <StatusDonut breakdown={breakdown} />
         </div>
         <AgentTable rollups={rollups} />
+        <EventFeed runs={feed} now={now} />
       </main>
     </div>
   );
