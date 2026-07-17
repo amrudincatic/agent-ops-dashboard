@@ -7,7 +7,7 @@ export function createSimulator(seed = 9999): { next: (now: number) => AgentRun 
   return {
     next(now: number): AgentRun {
       n += 1;
-      return makeRun(rng, now, `live_${n}`);
+      return makeRun(rng, now, `live_${now}_${n}`);
     },
   };
 }

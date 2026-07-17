@@ -3,6 +3,10 @@ import { formatUsd, formatPct, formatDuration, formatDelta, formatRelativeTime }
 
 describe('formatters', () => {
   it('formats currency', () => { expect(formatUsd(12.5)).toBe('$12.50'); });
+  it('formats large currency without throwing', () => {
+    expect(formatUsd(1500)).toBe('$1,500');
+    expect(formatUsd(0)).toBe('$0.00');
+  });
   it('formats percent', () => { expect(formatPct(0.333, 1)).toBe('33.3%'); });
   it('formats duration', () => {
     expect(formatDuration(850)).toBe('850ms');

@@ -58,7 +58,7 @@ function sparkTrend(rs: AgentRun[], now: number, windowMs: number, buckets: numb
   const start = now - windowMs;
   const arr = new Array(buckets).fill(0) as number[];
   for (const r of rs) {
-    if (r.timestamp < start) continue;
+    if (r.timestamp < start || r.timestamp > now) continue;
     arr[Math.min(buckets - 1, Math.floor((r.timestamp - start) / bucketMs))] += 1;
   }
   return arr;

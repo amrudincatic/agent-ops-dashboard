@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import { computeKpis, bucketRuns, computeStatusBreakdown, approvalQueue, HOUR } from './aggregations';
+import { computeKpis, bucketRuns, computeStatusBreakdown, approvalQueue, computeAgentRollups, HOUR } from './aggregations';
 import type { AgentRun } from './types';
 
 const NOW = 100 * HOUR;
@@ -56,5 +56,38 @@ describe('approvalQueue', () => {
       run({ id: 'c', status: 'success' }),
     ];
     expect(approvalQueue(runs).map((r) => r.id)).toEqual(['a']);
+  });
+});
+
+describe('computeAgentRollups', () => {
+  it('rolls up per-agent runs, success rate and trend', () => {
+    const runs = [
+      run({ agentId: 'ai-core', status: 'success' }),
+      run({ agentId: 'ai-core', status: 'failed' }),
+      run({ agentId: 'attribution', status: 'success' }),
+    ];
+    const rollups = computeAgentRollups(runs, NOW);
+    expect(rollups).toHaveLength(5);
+    const aiCore = rollups.find((r) => r.agentId === 'ai-core')!;
+    expect(aiCore.runs).toBe(2);
+    expect(aiCore.successRate).toBeCloseTo(0.5, 5);
+    expect(aiCore.trend).toHaveLength(10);
+    expect(aiCore.trend.reduce((s, v) => s + v, 0)).toBe(2);
+    expect(rollups.find((r) => r.agentId === 'content-engine')!.runs).toBe(0);
+  });
+});
+
+describe('computeKpis deltas', () => {
+  it('reports a positive run delta when the recent half has more runs', () => {
+    const runs = [
+      run({ timestamp: NOW - 20 * HOUR }),
+      run({ timestamp: NOW - 2 * HOUR }),
+      run({ timestamp: NOW - 1 * HOUR }),
+    ];
+    expect(computeKpis(runs, NOW).deltas.totalRuns).toBeGreaterThan(0);
+  });
+  it('guards divide-by-zero when the previous half is empty', () => {
+    const runs = [run({ timestamp: NOW - 1 * HOUR })];
+    expect(computeKpis(runs, NOW).deltas.totalRuns).toBe(0);
   });
 });

@@ -6,8 +6,10 @@ export const formatCompact = (n: number): string => compact.format(n);
 
 export const formatUsd = (n: number): string =>
   new Intl.NumberFormat('en-US', {
-    style: 'currency', currency: 'USD',
-    minimumFractionDigits: 2, maximumFractionDigits: n < 1000 ? 2 : 0,
+    style: 'currency',
+    currency: 'USD',
+    minimumFractionDigits: n < 1000 ? 2 : 0,
+    maximumFractionDigits: n < 1000 ? 2 : 0,
   }).format(n);
 
 export const formatPct = (x: number, digits = 0): string => `${(x * 100).toFixed(digits)}%`;

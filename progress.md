@@ -20,3 +20,4 @@ A running journal of every step. Newest entries at the bottom.
 - Task 5: formatting utilities (`formatUsd`, `formatPct`, `formatDelta`, `formatDuration`, `formatRelativeTime`, etc.) and status/agent color tokens, with tests (5 passing).
 - Task 6: live run simulator (`createSimulator`) reusing the seeded `makeRun` generator to emit unique, timestamped runs on demand, with tests (1 passing).
 - Task 7: Zustand `useDashboardStore` (runs/startedAt/lastUpdated + addRun/resolveApproval) seeded from `generateHistory`, and `useLiveStream` interval hook wired to the simulator; verified via `npm run build` (no type errors).
+- Review fixes: hardened formatUsd for large values, unique live ids, sparkTrend guard; added tests for computeAgentRollups, KPI deltas, and the store.
