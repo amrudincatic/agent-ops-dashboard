@@ -18,3 +18,4 @@ A running journal of every step. Newest entries at the bottom.
 - Task 3: seeded `mulberry32` PRNG + deterministic history generator (`generateHistory`, `makeRun`), with tests (3 passing).
 - Task 4: pure aggregation selectors (`computeKpis`, `bucketRuns`, `computeAgentRollups`, `computeStatusBreakdown`, `approvalQueue`), with tests (5 passing).
 - Task 5: formatting utilities (`formatUsd`, `formatPct`, `formatDelta`, `formatDuration`, `formatRelativeTime`, etc.) and status/agent color tokens, with tests (5 passing).
+- Task 6: live run simulator (`createSimulator`) reusing the seeded `makeRun` generator to emit unique, timestamped runs on demand, with tests (1 passing).
