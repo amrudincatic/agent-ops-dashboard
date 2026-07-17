@@ -4,6 +4,7 @@ import { KpiRow } from './components/KpiRow';
 import { RunsChart } from './components/RunsChart';
 import { CostChart } from './components/CostChart';
 import { StatusDonut } from './components/StatusDonut';
+import { AgentTable } from './components/AgentTable';
 import { computeKpis, computeAgentRollups, bucketRuns, computeStatusBreakdown } from './data/aggregations';
 import { useDashboardStore } from './store/useDashboardStore';
 import { useLiveStream } from './store/useLiveStream';
@@ -27,6 +28,7 @@ export default function App() {
           <CostChart buckets={buckets} />
           <StatusDonut breakdown={breakdown} />
         </div>
+        <AgentTable rollups={rollups} />
       </main>
     </div>
   );

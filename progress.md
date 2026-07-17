@@ -24,3 +24,4 @@ A running journal of every step. Newest entries at the bottom.
 - Task 8: app shell, header, and live indicator; App starts the live stream and renders the header.
 - Task 9: KPI row with sparklines (Sparkline, KpiCard, KpiRow) wired to computeKpis/computeAgentRollups.
 - Task 10: runs, cost, and status charts (RunsChart, CostChart, StatusDonut) built on Recharts.
+- Task 11: per-agent performance table (AgentTable) with inline trend sparklines.
