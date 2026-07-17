@@ -36,3 +36,5 @@ A running journal of every step. Newest entries at the bottom.
 - Surfaced attributed revenue: added totalRevenueUsd aggregation (with test) and an Attributed revenue KPI (replacing the always-5 Active agents card).
 - Dark mode: class-based theme with header toggle, system default, no-flash init; variable-driven tokens so charts and UI adapt. Added footer crediting Amrudin Catic (amrudincatic.com) and a demo-only note.
 - Verified both themes in a real browser (light and dark), captured `docs/screenshot.png` and `docs/screenshot-dark.png`, and rewrote `README.md` into a full project explainer (what it is, what it shows, how it works, stack, run, structure, testing, scope, author).
+- Published to GitHub as a public repo (amrudincatic/agent-ops-dashboard).
+- Deployment: added repo topics, enabled GitHub Pages (Actions source), a `build:pages` script (relative base) and a Pages deploy workflow (`.github/workflows/deploy.yml`) so pushes to main build and publish a live demo.
