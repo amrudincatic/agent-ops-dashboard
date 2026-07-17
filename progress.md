@@ -1,4 +1,4 @@
-# Build Progress — Agent Ops Dashboard
+# Build Progress - Agent Ops Dashboard
 
 A running journal of every step. Newest entries at the bottom.
 

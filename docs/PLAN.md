@@ -1,4 +1,4 @@
-# Agent Ops Dashboard — Implementation Plan
+# Agent Ops Dashboard - Implementation Plan
 
 > **For agentic workers:** REQUIRED SUB-SKILL: Use superpowers:subagent-driven-development (recommended) or superpowers:executing-plans to implement this plan task-by-task. Steps use checkbox (`- [ ]`) syntax for tracking.
 
@@ -135,7 +135,7 @@ Add scripts to `package.json`:
 `src/App.tsx`:
 ```tsx
 export default function App() {
-  return <div className="p-8 text-lg font-semibold">Agent Ops — booting…</div>;
+  return <div className="p-8 text-lg font-semibold">Agent Ops - booting…</div>;
 }
 ```
 
@@ -143,7 +143,7 @@ export default function App() {
 
 `CLAUDE.md`:
 ```markdown
-# CLAUDE.md — Agent Ops Dashboard
+# CLAUDE.md - Agent Ops Dashboard
 
 ## What this is
 A single-page analytics dashboard monitoring a simulated live AI agent pipeline.
@@ -154,15 +154,15 @@ React + Vite + TypeScript (strict) + Tailwind + Zustand + Recharts + Vitest.
 
 ## Run
 - `npm install`
-- `npm run dev` — start the dashboard
-- `npm test` — run unit tests
-- `npm run build` — typecheck + production build
+- `npm run dev` - start the dashboard
+- `npm test` - run unit tests
+- `npm run build` - typecheck + production build
 
 ## Structure
-- `src/data/` — types, agent registry, seeded history, aggregation selectors, live simulator
-- `src/store/` — Zustand store + live-stream hook
-- `src/lib/` — formatting + color tokens
-- `src/components/` — presentational components
+- `src/data/` - types, agent registry, seeded history, aggregation selectors, live simulator
+- `src/store/` - Zustand store + live-stream hook
+- `src/lib/` - formatting + color tokens
+- `src/components/` - presentational components
 
 ## Conventions
 - Keep files small and single-responsibility.
@@ -173,7 +173,7 @@ React + Vite + TypeScript (strict) + Tailwind + Zustand + Recharts + Vitest.
 
 `progress.md`:
 ```markdown
-# Build Progress — Agent Ops Dashboard
+# Build Progress - Agent Ops Dashboard
 
 A running journal of every build step. Newest entries at the bottom.
 
@@ -185,7 +185,7 @@ A running journal of every build step. Newest entries at the bottom.
 
 `README.md` (screenshot added in Task 15):
 ```markdown
-# Agent Ops — AI Pipeline Analytics Dashboard
+# Agent Ops - AI Pipeline Analytics Dashboard
 
 A clean, modern, single-page dashboard that monitors a **simulated live AI agent pipeline**
 (intent-signal → ai-core → content-engine → attribution → revenue-engine). Runs stream in
@@ -215,8 +215,8 @@ See `docs/DESIGN.md` for the full design.
 
 - [ ] **Step 6: Verify dev + test run**
 
-Run: `npm run dev` → Expected: server starts, page shows "Agent Ops — booting…".
-Run: `npm test` → Expected: "No test files found" (exit 0) — runner works.
+Run: `npm run dev` → Expected: server starts, page shows "Agent Ops - booting…".
+Run: `npm test` → Expected: "No test files found" (exit 0) - runner works.
 
 - [ ] **Step 7: Commit**
 
@@ -369,7 +369,7 @@ git add src/data/types.ts src/data/agents.ts src/data/agents.test.ts
 git commit -m "feat(data): domain types and agent registry"
 ```
 
-- [ ] **Step 6: Update progress.md** — append a "Task 2" bullet, then `git commit -am "docs: progress task 2"`.
+- [ ] **Step 6: Update progress.md** - append a "Task 2" bullet, then `git commit -am "docs: progress task 2"`.
 
 ---
 
@@ -747,7 +747,7 @@ describe('formatters', () => {
 });
 ```
 
-- [ ] **Step 2: Run test to verify it fails** — `npm test src/lib/format.test.ts` → FAIL.
+- [ ] **Step 2: Run test to verify it fails** - `npm test src/lib/format.test.ts` → FAIL.
 
 - [ ] **Step 3: Write `src/lib/format.ts`**
 
@@ -806,7 +806,7 @@ export const AGENT_COLORS: Record<AgentId, string> = {
 };
 ```
 
-- [ ] **Step 5: Run test to verify it passes** — `npm test src/lib/format.test.ts` → PASS.
+- [ ] **Step 5: Run test to verify it passes** - `npm test src/lib/format.test.ts` → PASS.
 
 - [ ] **Step 6: Commit + progress**
 
@@ -846,7 +846,7 @@ describe('createSimulator', () => {
 });
 ```
 
-- [ ] **Step 2: Run test to verify it fails** — FAIL.
+- [ ] **Step 2: Run test to verify it fails** - FAIL.
 
 - [ ] **Step 3: Write `src/data/simulator.ts`**
 
@@ -866,7 +866,7 @@ export function createSimulator(seed = 9999): { next: (now: number) => AgentRun 
 }
 ```
 
-- [ ] **Step 4: Run test to verify it passes** — PASS.
+- [ ] **Step 4: Run test to verify it passes** - PASS.
 
 - [ ] **Step 5: Commit + progress**
 
@@ -938,7 +938,7 @@ export function useLiveStream(intervalMs = 2000): void {
 }
 ```
 
-- [ ] **Step 3: Typecheck** — Run: `npm run build` → Expected: no type errors (app still placeholder).
+- [ ] **Step 3: Typecheck** - Run: `npm run build` → Expected: no type errors (app still placeholder).
 
 - [ ] **Step 4: Commit + progress**
 
@@ -960,7 +960,7 @@ Append Task 7 to `progress.md`; commit.
 - Consumes: `useDashboardStore`, `useLiveStream` (Task 7); `formatHour` (Task 5).
 - Produces: `<Header lastUpdated />`, `<LiveIndicator />`, an `App` that starts the stream and lays out a responsive container.
 
-> Baseline styling only — the `frontend-design` pass (Task 15) refines the visual system.
+> Baseline styling only - the `frontend-design` pass (Task 15) refines the visual system.
 
 - [ ] **Step 1: Write `src/components/LiveIndicator.tsx`**
 
@@ -1022,7 +1022,7 @@ export default function App() {
 }
 ```
 
-- [ ] **Step 4: Verify** — Run: `npm run dev` → Expected: header renders, "Live" dot pulses, "updated HH:MM" ticks every ~2s.
+- [ ] **Step 4: Verify** - Run: `npm run dev` → Expected: header renders, "Live" dot pulses, "updated HH:MM" ticks every ~2s.
 
 - [ ] **Step 5: Commit + progress**
 
@@ -1142,7 +1142,7 @@ Replace `<main>…</main>` with:
       </main>
 ```
 
-- [ ] **Step 5: Verify** — `npm run dev` → Expected: 6 KPI cards render with live-updating values and a sparkline on "Total runs".
+- [ ] **Step 5: Verify** - `npm run dev` → Expected: 6 KPI cards render with live-updating values and a sparkline on "Total runs".
 
 - [ ] **Step 6: Commit + progress**
 
@@ -1280,7 +1280,7 @@ Extend `<main>`:
         </div>
 ```
 
-- [ ] **Step 5: Verify** — `npm run dev` → Expected: area chart, bar chart, donut render and refresh as runs stream.
+- [ ] **Step 5: Verify** - `npm run dev` → Expected: area chart, bar chart, donut render and refresh as runs stream.
 
 - [ ] **Step 6: Commit + progress**
 
@@ -1356,9 +1356,9 @@ export function AgentTable({ rollups }: { rollups: AgentRollup[] }) {
 }
 ```
 
-- [ ] **Step 2: Wire into `src/App.tsx`** — import `AgentTable`, add `<AgentTable rollups={rollups} />` to `<main>`.
+- [ ] **Step 2: Wire into `src/App.tsx`** - import `AgentTable`, add `<AgentTable rollups={rollups} />` to `<main>`.
 
-- [ ] **Step 3: Verify** — `npm run dev` → Expected: 5-row table with per-agent metrics and trend sparklines.
+- [ ] **Step 3: Verify** - `npm run dev` → Expected: 5-row table with per-agent metrics and trend sparklines.
 
 - [ ] **Step 4: Commit + progress**
 
@@ -1435,7 +1435,7 @@ Add to `<main>` (feed + approval queue share a row in Task 13):
         <EventFeed runs={feed} now={now} />
 ```
 
-- [ ] **Step 4: Verify** — `npm run dev` → Expected: new events appear at the top every ~2s with a fade-in.
+- [ ] **Step 4: Verify** - `npm run dev` → Expected: new events appear at the top every ~2s with a fade-in.
 
 - [ ] **Step 5: Commit + progress**
 
@@ -1532,7 +1532,7 @@ Replace the standalone `<EventFeed …/>` line with a two-column row:
         </div>
 ```
 
-- [ ] **Step 3: Verify** — `npm run dev` → Expected: Approve/Reject removes an item from the queue and updates the "Approvals pending" KPI.
+- [ ] **Step 3: Verify** - `npm run dev` → Expected: Approve/Reject removes an item from the queue and updates the "Approvals pending" KPI.
 
 - [ ] **Step 4: Commit + progress**
 
@@ -1549,7 +1549,7 @@ Append Task 13 to `progress.md`; commit.
 **Files:**
 - Modify: `src/App.tsx` (final layout ordering only, if needed)
 
-- [ ] **Step 1: Confirm final `<main>` order** — KPI row → RunsChart → (CostChart | StatusDonut) → AgentTable → (EventFeed | ApprovalQueue).
+- [ ] **Step 1: Confirm final `<main>` order** - KPI row → RunsChart → (CostChart | StatusDonut) → AgentTable → (EventFeed | ApprovalQueue).
 
 - [ ] **Step 2: Full test + typecheck gate**
 
@@ -1579,14 +1579,14 @@ Append Task 14 to `progress.md`; commit.
 
 - [ ] **Step 2: Apply the system** consistently to Header, KPI cards, charts, table, feed, and approval queue. Keep all component props and data interfaces unchanged.
 
-- [ ] **Step 3: Responsiveness pass** — verify the grid collapses cleanly at `sm`/`md`/`lg`; the page body must not scroll horizontally.
+- [ ] **Step 3: Responsiveness pass** - verify the grid collapses cleanly at `sm`/`md`/`lg`; the page body must not scroll horizontally.
 
 - [ ] **Step 4: Capture a screenshot** of the running dashboard, save to `docs/screenshot.png`, and embed it at the top of `README.md`:
 ```markdown
 ![Agent Ops dashboard](docs/screenshot.png)
 ```
 
-- [ ] **Step 5: Final gate** — `npm run build` and `npm test` both green.
+- [ ] **Step 5: Final gate** - `npm run build` and `npm test` both green.
 
 - [ ] **Step 6: Commit + progress**
 
@@ -1600,6 +1600,6 @@ Append Task 15 to `progress.md`; commit.
 
 ## Self-review notes
 
-- **Spec coverage:** all 6 dashboard zones (Header, KPI row, primary chart, secondary charts, per-agent table, event feed + approval queue) map to Tasks 8–13; data layer + deterministic seed + simulator + tests map to Tasks 2–7; `CLAUDE.md`/`progress.md`/`README.md`/`.gitignore` in Task 1; frontend-design + screenshot in Task 15. No CI (correctly omitted).
-- **Type consistency:** selector signatures in Task 4 match consumers in Tasks 9–13; `resolveApproval(id, approved)` defined in Task 7 matches `onResolve` in Task 13; `AgentRun`/`Kpis`/`TimeBucket`/`AgentRollup`/`StatusBreakdown` defined once in Task 2 and reused verbatim.
+- **Spec coverage:** all 6 dashboard zones (Header, KPI row, primary chart, secondary charts, per-agent table, event feed + approval queue) map to Tasks 8-13; data layer + deterministic seed + simulator + tests map to Tasks 2-7; `CLAUDE.md`/`progress.md`/`README.md`/`.gitignore` in Task 1; frontend-design + screenshot in Task 15. No CI (correctly omitted).
+- **Type consistency:** selector signatures in Task 4 match consumers in Tasks 9-13; `resolveApproval(id, approved)` defined in Task 7 matches `onResolve` in Task 13; `AgentRun`/`Kpis`/`TimeBucket`/`AgentRollup`/`StatusBreakdown` defined once in Task 2 and reused verbatim.
 - **No placeholders:** every code step contains complete, runnable code.
