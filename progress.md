@@ -22,3 +22,4 @@ A running journal of every step. Newest entries at the bottom.
 - Task 7: Zustand `useDashboardStore` (runs/startedAt/lastUpdated + addRun/resolveApproval) seeded from `generateHistory`, and `useLiveStream` interval hook wired to the simulator; verified via `npm run build` (no type errors).
 - Review fixes: hardened formatUsd for large values, unique live ids, sparkTrend guard; added tests for computeAgentRollups, KPI deltas, and the store.
 - Task 8: app shell, header, and live indicator; App starts the live stream and renders the header.
+- Task 9: KPI row with sparklines (Sparkline, KpiCard, KpiRow) wired to computeKpis/computeAgentRollups.
