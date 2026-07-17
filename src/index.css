@@ -2,11 +2,29 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  color-scheme: light;
-}
+:root { color-scheme: light; }
+
+html { -webkit-text-size-adjust: 100%; }
+
 body {
-  @apply bg-slate-50 text-slate-900 antialiased;
+  @apply bg-canvas text-ink antialiased;
+  font-family: 'Inter Variable', ui-sans-serif, system-ui, sans-serif;
+}
+
+@layer components {
+  .card {
+    @apply rounded-xl border border-hairline bg-surface shadow-card;
+  }
+  .eyebrow {
+    @apply text-[11px] font-medium uppercase tracking-[0.08em] text-faint;
+  }
+  .panel-title {
+    @apply font-display text-[15px] font-semibold tracking-tight text-ink;
+  }
+  .num {
+    font-family: 'IBM Plex Mono', ui-monospace, monospace;
+    font-feature-settings: 'tnum';
+  }
 }
 
 @keyframes feed-in {
@@ -14,3 +32,13 @@ body {
   to { opacity: 1; transform: translateY(0); }
 }
 .animate-feed-in { animation: feed-in 240ms ease-out; }
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-feed-in, .animate-ping { animation: none !important; }
+}
+
+:focus-visible {
+  outline: 2px solid #4338CA;
+  outline-offset: 2px;
+  border-radius: 4px;
+}

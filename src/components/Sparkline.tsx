@@ -1,5 +1,5 @@
 export function Sparkline({
-  data, width = 80, height = 26, color = '#4f46e5',
+  data, width = 80, height = 26, color = '#4338CA',
 }: { data: number[]; width?: number; height?: number; color?: string }) {
   if (data.length < 2) return <svg width={width} height={height} />;
   const max = Math.max(...data, 1);

@@ -28,3 +28,4 @@ A running journal of every step. Newest entries at the bottom.
 - Task 12: live event feed (EventFeed) with a fade-in keyframe for new entries.
 - Task 13: human approval queue (ApprovalQueue) wired to resolveApproval; feed and queue share a two-column row.
 - Task 14: final assembly gate: npm test (24 passing), npm run build (no type errors), npm run lint (clean).
+- Task 15 (design): applied visual system (Space Grotesk / Inter / IBM Plex Mono, pipeline color sequence, flat card system, sticky header, self-hosted fonts).

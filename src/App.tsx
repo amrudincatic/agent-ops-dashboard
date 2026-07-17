@@ -24,9 +24,13 @@ export default function App() {
   const feed = useMemo(() => [...runs].slice(-40).reverse(), [runs]);
   const queue = useMemo(() => approvalQueue(runs), [runs]);
   return (
-    <div className="mx-auto max-w-7xl px-6 py-8">
-      <Header lastUpdated={lastUpdated} />
-      <main className="space-y-6 py-6">
+    <div className="min-h-screen bg-canvas">
+      <header className="sticky top-0 z-20 border-b border-hairline bg-canvas/80 backdrop-blur">
+        <div className="mx-auto max-w-7xl px-6 py-4">
+          <Header lastUpdated={lastUpdated} />
+        </div>
+      </header>
+      <main className="mx-auto max-w-7xl space-y-6 px-6 py-8">
         <KpiRow kpis={kpis} rollups={rollups} />
         <RunsChart buckets={buckets} />
         <div className="grid gap-6 lg:grid-cols-2">
