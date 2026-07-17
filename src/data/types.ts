@@ -33,6 +33,7 @@ export interface Kpis {
   successRate: number; // 0..1
   avgConfidence: number; // 0..1
   totalCostUsd: number;
+  totalRevenueUsd: number;
   activeAgents: number;
   approvalsPending: number;
   deltas: {
@@ -40,6 +41,7 @@ export interface Kpis {
     successRate: number; // absolute pct-point change
     avgConfidence: number; // absolute change
     totalCostUsd: number; // relative change
+    totalRevenueUsd: number; // relative change
   };
 }
 

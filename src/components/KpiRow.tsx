@@ -10,10 +10,10 @@ export function KpiRow({ kpis, rollups }: { kpis: Kpis; rollups: AgentRollup[] }
   return (
     <section className="grid grid-cols-2 gap-4 md:grid-cols-3 xl:grid-cols-6">
       <KpiCard label="Total runs" value={formatCompact(kpis.totalRuns)} delta={kpis.deltas.totalRuns} spark={runTrend} />
+      <KpiCard label="Attributed revenue" value={formatUsd(kpis.totalRevenueUsd)} delta={kpis.deltas.totalRevenueUsd} />
       <KpiCard label="Success rate" value={formatPct(kpis.successRate, 1)} delta={kpis.deltas.successRate} />
       <KpiCard label="Avg confidence" value={formatPct(kpis.avgConfidence, 1)} delta={kpis.deltas.avgConfidence} />
       <KpiCard label="Total cost" value={formatUsd(kpis.totalCostUsd)} delta={kpis.deltas.totalCostUsd} deltaMode="lower-better" />
-      <KpiCard label="Active agents" value={String(kpis.activeAgents)} />
       <KpiCard label="Approvals pending" value={String(kpis.approvalsPending)} deltaMode="lower-better" />
     </section>
   );

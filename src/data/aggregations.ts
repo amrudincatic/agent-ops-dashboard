@@ -12,6 +12,7 @@ const rate = (arr: AgentRun[]) =>
 const meanConf = (arr: AgentRun[]) =>
   arr.length ? arr.reduce((s, r) => s + r.confidence, 0) / arr.length : 0;
 const sumCost = (arr: AgentRun[]) => arr.reduce((s, r) => s + r.costUsd, 0);
+const sumRev = (arr: AgentRun[]) => arr.reduce((s, r) => s + r.revenueUsd, 0);
 const rel = (a: number, b: number) => (b ? (a - b) / b : 0);
 
 export function computeKpis(runs: AgentRun[], now: number, windowMs = DAY): Kpis {
@@ -24,6 +25,7 @@ export function computeKpis(runs: AgentRun[], now: number, windowMs = DAY): Kpis
     successRate: rate(w),
     avgConfidence: meanConf(w),
     totalCostUsd: sumCost(w),
+    totalRevenueUsd: sumRev(w),
     activeAgents: new Set(recent.map((r) => r.agentId)).size,
     approvalsPending: w.filter((r) => r.status === 'needs-review' && r.approved === undefined).length,
     deltas: {
@@ -31,6 +33,7 @@ export function computeKpis(runs: AgentRun[], now: number, windowMs = DAY): Kpis
       successRate: rate(recent) - rate(prev),
       avgConfidence: meanConf(recent) - meanConf(prev),
       totalCostUsd: rel(sumCost(recent), sumCost(prev)),
+      totalRevenueUsd: rel(sumRev(recent), sumRev(prev)),
     },
   };
 }

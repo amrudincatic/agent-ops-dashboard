@@ -77,6 +77,13 @@ describe('computeAgentRollups', () => {
   });
 });
 
+describe('computeKpis revenue', () => {
+  it('sums attributed revenue in the window', () => {
+    const runs = [run({ revenueUsd: 100 }), run({ revenueUsd: 250 }), run({ revenueUsd: 0 })];
+    expect(computeKpis(runs, NOW).totalRevenueUsd).toBeCloseTo(350, 5);
+  });
+});
+
 describe('computeKpis deltas', () => {
   it('reports a positive run delta when the recent half has more runs', () => {
     const runs = [

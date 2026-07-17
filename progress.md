@@ -33,3 +33,4 @@ A running journal of every step. Newest entries at the bottom.
 - Task 15 (docs): captured `docs/screenshot.png` and wrote `README.md` (overview, what it demonstrates, run instructions).
 - Final review (whole branch): verdict ready to ship, no critical/important issues; applied the worthwhile minors below.
 - Task 15 (polish): disabled per-tick chart re-animation for smooth live updates; added accessible status labels to the event feed; unified the Live indicator to the `ok` color token; refreshed the screenshot.
+- Surfaced attributed revenue: added totalRevenueUsd aggregation (with test) and an Attributed revenue KPI (replacing the always-5 Active agents card).
