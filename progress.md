@@ -13,4 +13,4 @@ A running journal of every step. Newest entries at the bottom.
 - Created project docs: `CLAUDE.md` (project memory) and this `progress.md` (build journal).
 
 ### Build
-- (entries appended per task as the build proceeds…)
+- Task 1: scaffolded Vite + React + TS + Tailwind + Zustand + Recharts + Vitest; dev/test/build toolchain verified.
