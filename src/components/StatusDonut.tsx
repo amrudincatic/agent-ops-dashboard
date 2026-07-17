@@ -13,7 +13,7 @@ export function StatusDonut({ breakdown }: { breakdown: StatusBreakdown }) {
       <h2 className="panel-title mb-4">Status breakdown</h2>
       <ResponsiveContainer width="100%" height={200}>
         <PieChart>
-          <Pie data={data} dataKey="value" nameKey="name" innerRadius={54} outerRadius={78} paddingAngle={2}>
+          <Pie data={data} dataKey="value" nameKey="name" innerRadius={54} outerRadius={78} paddingAngle={2} isAnimationActive={false}>
             {data.map((d) => <Cell key={d.name} fill={d.color} />)}
           </Pie>
           <Tooltip contentStyle={{ borderRadius: 10, border: '1px solid #EAECF0', fontSize: 12, fontFamily: 'IBM Plex Mono, monospace' }} />

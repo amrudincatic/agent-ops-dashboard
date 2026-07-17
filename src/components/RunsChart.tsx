@@ -14,9 +14,9 @@ export function RunsChart({ buckets }: { buckets: TimeBucket[] }) {
           <XAxis dataKey="label" tick={{ fontSize: 11, fill: '#98A2B3' }} interval={3} tickLine={false} axisLine={false} />
           <YAxis tick={{ fontSize: 11, fill: '#98A2B3' }} tickLine={false} axisLine={false} width={40} />
           <Tooltip contentStyle={{ borderRadius: 10, border: '1px solid #EAECF0', fontSize: 12, fontFamily: 'IBM Plex Mono, monospace' }} />
-          <Area type="monotone" dataKey="success" stackId="1" stroke={STATUS_COLORS.success} fill={STATUS_COLORS.success} fillOpacity={0.2} />
-          <Area type="monotone" dataKey="needsReview" stackId="1" stroke={STATUS_COLORS['needs-review']} fill={STATUS_COLORS['needs-review']} fillOpacity={0.2} />
-          <Area type="monotone" dataKey="failed" stackId="1" stroke={STATUS_COLORS.failed} fill={STATUS_COLORS.failed} fillOpacity={0.2} />
+          <Area type="monotone" dataKey="success" stackId="1" stroke={STATUS_COLORS.success} fill={STATUS_COLORS.success} fillOpacity={0.2} isAnimationActive={false} />
+          <Area type="monotone" dataKey="needsReview" stackId="1" stroke={STATUS_COLORS['needs-review']} fill={STATUS_COLORS['needs-review']} fillOpacity={0.2} isAnimationActive={false} />
+          <Area type="monotone" dataKey="failed" stackId="1" stroke={STATUS_COLORS.failed} fill={STATUS_COLORS.failed} fillOpacity={0.2} isAnimationActive={false} />
         </AreaChart>
       </ResponsiveContainer>
     </div>

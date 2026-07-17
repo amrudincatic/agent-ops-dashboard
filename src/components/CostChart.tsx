@@ -14,7 +14,7 @@ export function CostChart({ buckets }: { buckets: TimeBucket[] }) {
           <XAxis dataKey="label" tick={{ fontSize: 11, fill: '#98A2B3' }} interval={5} tickLine={false} axisLine={false} />
           <YAxis tick={{ fontSize: 11, fill: '#98A2B3' }} tickLine={false} axisLine={false} width={48} tickFormatter={(v) => formatUsd(v)} />
           <Tooltip formatter={(v: number) => formatUsd(v)} contentStyle={{ borderRadius: 10, border: '1px solid #EAECF0', fontSize: 12, fontFamily: 'IBM Plex Mono, monospace' }} />
-          <Bar dataKey="costUsd" fill={ACCENT} radius={[3, 3, 0, 0]} />
+          <Bar dataKey="costUsd" fill={ACCENT} radius={[3, 3, 0, 0]} isAnimationActive={false} />
         </BarChart>
       </ResponsiveContainer>
     </div>

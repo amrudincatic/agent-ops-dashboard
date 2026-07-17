@@ -10,7 +10,13 @@ export function EventFeed({ runs, now }: { runs: AgentRun[]; now: number }) {
       <ul className="max-h-[420px] space-y-1 overflow-y-auto pr-1">
         {runs.map((r) => (
           <li key={r.id} className="animate-feed-in flex items-center gap-3 rounded-lg px-2 py-2 hover:bg-canvas">
-            <span className="h-2 w-2 shrink-0 rounded-full" style={{ background: STATUS_COLORS[r.status] }} />
+            <span
+              className="h-2 w-2 shrink-0 rounded-full"
+              style={{ background: STATUS_COLORS[r.status] }}
+              role="img"
+              aria-label={`status: ${r.status}`}
+              title={r.status}
+            />
             <span className="text-xs font-medium" style={{ color: AGENT_COLORS[r.agentId] }}>
               {AGENT_BY_ID[r.agentId].label}
             </span>

@@ -31,3 +31,5 @@ A running journal of every step. Newest entries at the bottom.
 - Task 15 (design): applied visual system (Space Grotesk / Inter / IBM Plex Mono, pipeline color sequence, flat card system, sticky header, self-hosted fonts).
 - Task 15 (verify): booted the app in a real browser, confirmed no console errors, checked mobile layout; added `min-w` so the agent table scrolls instead of cramping on small screens.
 - Task 15 (docs): captured `docs/screenshot.png` and wrote `README.md` (overview, what it demonstrates, run instructions).
+- Final review (whole branch): verdict ready to ship, no critical/important issues; applied the worthwhile minors below.
+- Task 15 (polish): disabled per-tick chart re-animation for smooth live updates; added accessible status labels to the event feed; unified the Live indicator to the `ok` color token; refreshed the screenshot.
