@@ -38,3 +38,4 @@ A running journal of every step. Newest entries at the bottom.
 - Verified both themes in a real browser (light and dark), captured `docs/screenshot.png` and `docs/screenshot-dark.png`, and rewrote `README.md` into a full project explainer (what it is, what it shows, how it works, stack, run, structure, testing, scope, author).
 - Published to GitHub as a public repo (amrudincatic/agent-ops-dashboard).
 - Deployment: added repo topics, enabled GitHub Pages (Actions source), a `build:pages` script (relative base) and a Pages deploy workflow (`.github/workflows/deploy.yml`) so pushes to main build and publish a live demo.
+- Added the live demo link to the README, set the repo homepage to the Pages URL, and added an MIT `LICENSE` (with a License section in the README).

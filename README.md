@@ -27,6 +27,7 @@ A clean, modern, single-page **analytics dashboard** that monitors a simulated l
 - [Testing](#testing)
 - [Design notes](#design-notes)
 - [Scope and limitations](#scope-and-limitations)
+- [License](#license)
 - [Author](#author)
 
 ## What it is
@@ -155,6 +156,10 @@ This is intentionally scoped as a proof-of-work, not a production system:
 - No backend, authentication, persistence, or routing.
 - All data is simulated in the browser; nothing is sent anywhere.
 - No analytics or tracking of the viewer.
+
+## License
+
+Released under the [MIT License](LICENSE). You are free to use the code as a reference or starting point.
 
 ## Author
 
