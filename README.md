@@ -123,6 +123,7 @@ docs/
   screenshot*  light and dark screenshots
 CLAUDE.md      project notes and conventions
 progress.md    a running build journal
+todo.md        open items
 ```
 
 ## Testing

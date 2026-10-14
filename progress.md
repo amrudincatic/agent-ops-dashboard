@@ -1,6 +1,14 @@
-# Build Progress - Agent Ops Dashboard
+# Build Progress: Agent Ops Dashboard
 
-A running journal of every step. Newest entries at the bottom.
+A running journal of every step. Newest entries at the top.
+
+## 2026-10-14: Unified with the Chata AI Tower standard
+
+- `CLAUDE.md` no longer repeats rules that load in every session from the global rules (`~/.claude/CLAUDE.md`) and the private root rules (`~/GitHub/CLAUDE.md`): the dash rule (it allowed a plain hyphen as a dash, which the global rule forbids) and "update `progress.md` after each step". Added the pointer line to those rules, a "Where it runs" section (live demo on GitHub Pages, deployed by every push to `main`), `npm run build:pages`, and the theme hook under `src/store/`.
+- `todo.md` created, with a "Next session" section and one open item (the page title in `index.html` uses a spaced hyphen as a dash). `README.md` lists it in the project structure.
+- `progress.md` is newest first.
+- Spaced hyphens used as dashes rewritten in `CLAUDE.md`, `progress.md` and `docs/` (36 in all).
+- A push to `main` redeploys production with unchanged code.
 
 ## 2026-07-17
 
